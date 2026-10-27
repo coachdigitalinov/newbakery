@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCrumbs Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+    <h1>SweetCrumbs Bakery</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+      <h2>Freshly Baked, Made with Love</h2>
+      <p>Welcome to SweetCrumbs Bakery, where every loaf, cake, and pastry is baked fresh each morning.</p>
+      <button id="explore-btn">Explore Our Bakery</button>
+      <a class="view-menu" href="#menu">View Menu</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-card">
+          <p>SweetCrumbs Bakery is a small family-run bakery. We use simple, quality ingredients and traditional recipes to bake treats that bring people together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Our Freshly Baked Favourites</h2>
+        <div class="menu-grid">
+          <article class="card">
+            <div class="card-icon">🍫</div>
+            <h3>Chocolate Cake</h3>
+            <p class="price">₹450</p>
+            <p>Rich, moist chocolate layers finished with silky chocolate ganache.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🥐</div>
+            <h3>Butter Croissant</h3>
+            <p class="price">₹90</p>
+            <p>Golden, flaky layers of pastry baked fresh with real butter.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🫐</div>
+            <h3>Blueberry Muffin</h3>
+            <p class="price">₹120</p>
+            <p>Soft and fluffy muffin bursting with juicy blueberries.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🍪</div>
+            <h3>Chocolate Chip Cookies</h3>
+            <p class="price">₹150</p>
+            <p>Crisp edges, chewy centres and generous chocolate chips.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧁</div>
+            <h3>Strawberry Cupcake</h3>
+            <p class="price">₹100</p>
+            <p>Light vanilla sponge topped with creamy strawberry frosting.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🍞</div>
+            <h3>Sourdough Bread</h3>
+            <p class="price">₹180</p>
+            <p>Slow-fermented loaf with a crackly crust and a tender, tangy crumb.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="order">
+      <div class="container">
+        <h2>Order Your Favourites</h2>
+        <form id="order-form" class="order-form" novalidate>
+          <div class="form-group">
+            <label for="customer-name">Your Name</label>
+            <input type="text" id="customer-name" placeholder="Enter your name">
+            <span class="error" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="product">Choose a Product</label>
+            <select id="product">
+              <option value="Chocolate Cake" data-price="450">Chocolate Cake - ₹450</option>
+              <option value="Butter Croissant" data-price="90">Butter Croissant - ₹90</option>
+              <option value="Blueberry Muffin" data-price="120">Blueberry Muffin - ₹120</option>
+              <option value="Chocolate Chip Cookies" data-price="150">Chocolate Chip Cookies - ₹150</option>
+              <option value="Strawberry Cupcake" data-price="100">Strawberry Cupcake - ₹100</option>
+              <option value="Sourdough Bread" data-price="180">Sourdough Bread - ₹180</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <span class="error" id="quantity-error"></span>
+          </div>
+
+          <p class="total">Total: <strong id="total-price">₹450</strong></p>
+
+          <button type="submit">Place Order</button>
+        </form>
+
+        <div id="order-summary" class="order-summary" hidden></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-details">
+            <h3>SweetCrumbs Bakery</h3>
+            <p><strong>Email:</strong> <a href="mailto:hello@sweetcrumbs.example">hello@sweetcrumbs.example</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p><strong>Address:</strong> 12, Bakery Street, Chennai, Tamil Nadu</p>
+            <p><strong>Opening Hours:</strong> Monday to Saturday, 9:00 AM to 8:00 PM</p>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" placeholder="Your name">
+                <span class="error" id="contact-name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" placeholder="you@example.com">
+                <span class="error" id="contact-email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" placeholder="How can we help?"></textarea>
+                <span class="error" id="contact-message-error"></span>
+              </div>
+              <button type="submit">Send Message</button>
+              <p class="demo-note">This is a demo form. Your message is not sent to a real inbox.</p>
+            </form>
+            <p id="contact-confirmation" class="contact-confirmation" hidden></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SweetCrumbs Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
